@@ -1,0 +1,115 @@
+.blanknavbarframe,
+.blanknavbarframe * {
+  box-sizing: border-box;
+}
+.blanknavbarframe {
+  background: var(
+    --baby_color_gradient,
+    linear-gradient(
+      269.99deg,
+      rgba(255, 221, 252, 1) 20.3125%,
+      rgba(227, 248, 255, 1) 65.10416865348816%
+    )
+  );
+  border-radius: 0px 0px 8.17px 8.17px;
+  padding: 11.44px 0px 0px 0px;
+  display: flex;
+  flex-direction: row;
+  gap: 8.17px;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 1564.17px;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(1.63px);
+}
+.navitemlist {
+  padding: 0px 33.39px 0px 33.39px;
+  display: flex;
+  flex-direction: row;
+  gap: 52.06px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.navitem {
+  flex-shrink: 0;
+  width: 156.91px;
+  height: 41.68px;
+  position: relative;
+}
+.navbutton {
+  border-radius: 26.71px 26.71px 0px 0px;
+  width: 156.91px;
+  height: 41.68px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.rectangle-3 {
+  background: var(
+    --night_sakura,
+    linear-gradient(
+      -89.9deg,
+      rgba(252, 120, 255, 0.67) 0%,
+      rgba(111, 1, 150, 0.9) 100%
+    )
+  );
+  border-radius: 6.68px 6.68px 0px 0px;
+  opacity: 0.800000011920929;
+  width: 156.91px;
+  height: 41.68px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.about {
+  color: #ffffff;
+  text-align: center;
+  font: 600 24.04px "Inter", sans-serif;
+  position: absolute;
+  left: 33.26px;
+  top: 6.05px;
+  width: 90.78px;
+  height: 29.61px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.navitem2 {
+  border-radius: 26.71px 26.71px 0px 0px;
+  flex-shrink: 0;
+  width: 163.44px;
+  height: 41.68px;
+  position: relative;
+}
+.rectangle-32 {
+  background: var(
+    --mysterious_purple,
+    linear-gradient(
+      -89.9deg,
+      rgba(95, 0, 91, 0.9) 0%,
+      rgba(15, 21, 10, 0.9) 100%
+    )
+  );
+  border-radius: 6.68px 6.68px 0px 0px;
+  width: 163.44px;
+  height: 41.68px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.about2 {
+  color: #ffffff;
+  text-align: center;
+  font: 600 24.04px "Inter", sans-serif;
+  position: absolute;
+  left: 34.64px;
+  top: 6.05px;
+  width: 94.57px;
+  height: 29.61px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
