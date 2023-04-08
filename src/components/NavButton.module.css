@@ -39,10 +39,10 @@
 }
 
 /* variant styles */
-.navbutton--state-active {
+.activeLink .navbutton {
   border-radius: unset;
 }
-.navbutton--state-active .navbutton2 {
+.activeLink .navbutton .navbutton2 {
   border-radius: 32.69px 32.69px 0px 0px;
   width: 202px;
   height: 51px;
@@ -50,7 +50,7 @@
   left: 0px;
   top: 0px;
 }
-.navbutton--state-active .rectangle {
+.activeLink .navbutton .rectangle {
   background: var(
     --night_sakura,
     linear-gradient(
