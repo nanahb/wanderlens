@@ -1,14 +1,14 @@
-.navbutton,
-.navbutton * {
+
+.navbutton--state-default * {
   box-sizing: border-box;
 }
-.navbutton {
+.navbutton--state-default {
   border-radius: 32.69px 32.69px 0px 0px;
   width: 202px;
   height: 51px;
   position: relative;
 }
-.rectangle {
+.navbutton--state-default .rectangle {
   background: var(
     --mysterious_purple,
     linear-gradient(
@@ -39,10 +39,10 @@
 }
 
 /* variant styles */
-.activeLink .navbutton {
+.activeLink .navbutton--state-default {
   border-radius: unset;
 }
-.activeLink .navbutton .navbutton2 {
+.activeLink .navbutton--state-default .navbutton2 {
   border-radius: 32.69px 32.69px 0px 0px;
   width: 202px;
   height: 51px;
@@ -50,7 +50,7 @@
   left: 0px;
   top: 0px;
 }
-.activeLink .navbutton .rectangle {
+.activeLink .navbutton--state-default .rectangle {
   background: var(
     --night_sakura,
     linear-gradient(
@@ -71,7 +71,7 @@
   left: 0px;
   top: 0px;
 }
-.navbutton--state-hover .buttonrect {
+.navbutton--state-hover .rectangle {
   background: var(
     --blue_to_red,
     linear-gradient(

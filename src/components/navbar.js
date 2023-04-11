@@ -7,30 +7,20 @@ export const NavBar = ({ ...props }) => {
   return (
     <div className={styles["blanknavbarframe"]}>
       <div className={styles["navitemlist"]}>
-        <div className={styles["navitem"]}>
+        <div className={styles["navitem2"]}>
+        <NavButton text="Home" to="/"> </NavButton>
+        </div>
+        <div className={styles["navitem2"]}>
           <NavButton text="About" to="/about"> </NavButton>
-          {/* <div className={styles["navbutton"]}>
-            <div className={styles["rectangle-3"]}></div>
-
-            <div className={styles["about"]}>About</div>
-          </div> */}
-        </div>
-
-        <div className={styles["navitem2"]}>
-        <NavButton text="Photos" to="/photos"> </NavButton>
-          {/* <div className={styles["rectangle-32"]}></div>
-          <div className={styles["about2"]}>Photos</div> */}
-        </div>
-
-        <div className={styles["navitem2"]}>
-        <NavButton text="Contact" to="/contact"> </NavButton>
-          {/* <div className={styles["rectangle-32"]}></div>
-
-          <div className={styles["about2"]}>Contact</div> */}
         </div>
         <div className={styles["navitem2"]}>
-        <NavButton text="Blog" to="/blog"> </NavButton>
-
+          <NavButton text="Photos" to="/photos"> </NavButton>
+        </div>
+        <div className={styles["navitem2"]}>
+          <NavButton text="Contact" to="/contact"> </NavButton>
+        </div>
+        <div className={styles["navitem2"]}>
+          <NavButton text="Blog" to="/blog"> </NavButton>
         </div>
       </div>
     </div>

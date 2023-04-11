@@ -1,5 +1,5 @@
 /* Code generated with AutoHTML Plugin for Figma */
-import React from "react";
+import React, { useState } from "react";
 import { Link } from 'gatsby'
 import * as styles from "./NavButton.module.css";
 /**
@@ -10,11 +10,19 @@ import * as styles from "./NavButton.module.css";
  * .navbutton {default navbutton style}
  * .activeLink .navbutton {style for active}
  */
-export const NavButton = ({ state = "default", text = "Home", to='/', ...props }) => {
-  const variantsClassName = "navbutton--state-" + state;
+export const NavButton = ({ text = "Home", to='/', ...props }) => {
+  const [selected, setSelected] = useState(false);
+  const variantsClassName = "navbuttonState" + (selected ? "Hover" : "Default");
+  console.log(styles)
+  function onHoverCallback(){
+    setSelected(true)
+  }
+  function endHover(){
+    setSelected(false)
+  }
   return (
     <Link to={to} activeClassName={styles["activeLink"]}>
-    <div className={styles["navbutton"] + " " + styles[variantsClassName]}>
+    <div className={styles[variantsClassName]} onMouseEnter={onHoverCallback} onMouseLeave={endHover}>
       
         <div className={styles["rectangle"]}></div>
         <div className={styles["about"]}>{text}</div>
