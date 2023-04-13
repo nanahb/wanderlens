@@ -4,8 +4,6 @@ import Layout from '../components/layout'
 import * as styles from "../styles/about.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faFacebook, faInstagram, faLinkedin, faImdb } from "@fortawesome/free-brands-svg-icons";
-
-console.log(styles)
 // Step 2: Define your component
 const AboutPage = () => {
   return (
