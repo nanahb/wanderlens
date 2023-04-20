@@ -6,7 +6,7 @@ module.exports = {
     title: `Wanderlens`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-plugin-netlify-cms", "gatsby-plugin-styled-components", "gatsby-plugin-image", "gatsby-plugin-sitemap", "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
+  plugins: [ "gatsby-plugin-styled-components", "gatsby-plugin-image", "gatsby-plugin-sitemap", "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
@@ -20,5 +20,14 @@ module.exports = {
       "path": "./src/pages/"
     },
     __key: "pages"
-  }]
+  },{
+    resolve: `gatsby-source-contentful`,
+    options: {
+      spaceId: '7q7jwqqeswru',
+      // typeName: "query",
+      // fieldName: "photoCollection",
+      // Learn about environment variables: https://gatsby.dev/env-vars
+      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+    },
+  },]
 };
