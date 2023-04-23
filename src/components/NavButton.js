@@ -13,7 +13,7 @@ import * as styles from "./NavButton.module.css";
 export const NavButton = ({ text = "Home", to='/', ...props }) => {
   const [selected, setSelected] = useState(false);
   const variantsClassName = "navbuttonState" + (selected ? "Hover" : "Default");
-  console.log(styles)
+
   function onHoverCallback(){
     setSelected(true)
   }

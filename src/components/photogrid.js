@@ -1,7 +1,7 @@
 import * as React from "react"
 import { graphql, StaticQuery, useStaticQuery } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image";
-
+import * as styles from './photogrid.module.css';
 
 
 const PhotogridPage = () => {
@@ -10,17 +10,20 @@ const PhotogridPage = () => {
       <StaticQuery
       query={ graphql`
       query photoCollectionQuery {
-        contentfulPhoto{
-          image {
-            gatsbyImageData
-            height
+        allContentfulPhoto{
+          nodes {
+            image {
+              gatsbyImageData
+              height
+            }
           }
         }
       }`}
       render={data => (
-        <header>
-          <GatsbyImage image={data.contentfulPhoto.image.gatsbyImageData} alt={"Image of something"}></GatsbyImage>
-        </header>
+        <div id={styles["gallery"]}>
+        {data.allContentfulPhoto.nodes.map(node => (<GatsbyImage image={node.image.gatsbyImageData} alt={"Image of something"}></GatsbyImage>))}
+        
+        </div>
       )}
     />
     )

@@ -6,7 +6,6 @@ const Photos = () => {
   return (
     <Layout pageTitle={"Photos"}>
       <main>
-        <p>Photo Grid goes here.</p>
         <Photogrid></Photogrid>
       </main>
     </Layout>

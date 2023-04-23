@@ -24,8 +24,6 @@ module.exports = {
     resolve: `gatsby-source-contentful`,
     options: {
       spaceId: '7q7jwqqeswru',
-      // typeName: "query",
-      // fieldName: "photoCollection",
       // Learn about environment variables: https://gatsby.dev/env-vars
       accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
     },
