@@ -8,7 +8,7 @@ const Layout = ({ pageTitle, children }) => {
     <div className={container}>
       <NavBar></NavBar>
       <main>
-        <h1>{pageTitle}</h1>
+        <div style={{height : "30px"}}></div>
         {children}
       </main>
     </div>
