@@ -4,7 +4,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import * as styles from './photogrid.module.css';
 
 
-const PhotogridPage = () => {
+const PhotogridPage = ({onPhotoClick}) => {
   
     return (
       <StaticQuery
@@ -21,7 +21,10 @@ const PhotogridPage = () => {
       }`}
       render={data => (
         <div id={styles["gallery"]}>
-        {data.allContentfulPhoto.nodes.map(node => (<GatsbyImage image={node.image.gatsbyImageData} alt={"Image of something"}></GatsbyImage>))}
+        {data.allContentfulPhoto.nodes.map(node => (
+          <a  onClick={(e)=>onPhotoClick(node.image.gatsbyImageData)}>
+        <GatsbyImage image={node.image.gatsbyImageData}
+          alt={"Image of something"}></GatsbyImage> </a>))}
         
         </div>
       )}
