@@ -10,11 +10,11 @@ const PhotogridPage = ({onPhotoClick}) => {
       <StaticQuery
       query={ graphql`
       query photoCollectionQuery {
-        allContentfulPhoto{
+        allContentfulPhoto(filter: {node_locale: {eq: "en-US"}}){
           nodes {
             image {
               gatsbyImageData
-              height
+              title
             }
           }
         }
@@ -24,7 +24,7 @@ const PhotogridPage = ({onPhotoClick}) => {
         {data.allContentfulPhoto.nodes.map(node => (
           <a  onClick={(e)=>onPhotoClick(node.image.gatsbyImageData)}>
         <GatsbyImage image={node.image.gatsbyImageData}
-          alt={"Image of something"}></GatsbyImage> </a>))}
+          alt={node.image.title}></GatsbyImage> </a>))}
         
         </div>
       )}

@@ -1,5 +1,5 @@
 import * as React from "react"
-import { graphql, StaticQuery, useStaticQuery } from "gatsby"
+import { graphql, Link, StaticQuery, useStaticQuery } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image";
 import * as styles from './photocarousel.module.css';
 
@@ -10,26 +10,23 @@ const PhotoCarousel = ({ onPhotoClick }) => {
         <StaticQuery
             query={graphql`
       query photoCollectionQuery {
-        allContentfulPhoto{
+        allContentfulPhoto(filter: {node_locale: {eq: "en-US"}}){
           nodes {
             image {
               gatsbyImageData
-              height
+              title
             }
           }
         }
       }`}
             render={data => {
-                let imageDataList = data.allContentfulPhoto.nodes.slice(0, 12).map(node => node.image.gatsbyImageData)
-                let firstSix = imageDataList.slice(0,6).map(imageData => <GatsbyImage image={imageData}
-                    alt={"Image of something"} className={styles["photoItem"]}></GatsbyImage>)
-                let lastSix = imageDataList.slice(imageDataList.length-6, imageDataList.length).map(imageData => <GatsbyImage image={imageData}
-                    alt={"Image of something"} className={styles["photoItem"]}></GatsbyImage>)
+                let imageList = data.allContentfulPhoto.nodes.slice(0, 12).map(node => node.image)
+                let firstSix = imageList.slice(0,6).map(image => <GatsbyImage image={image.gatsbyImageData}
+                    alt={image.title} className={styles["photoItem"]}></GatsbyImage>)
+                let lastSix = imageList.slice(imageList.length-6, imageList.length).map(image => <GatsbyImage image={image.gatsbyImageData}
+                    alt={image.title} className={styles["photoItem"]}></GatsbyImage>)
                 return (
-                
-               
-                    
-
+                        <Link to={"/photos"}>
                         <div className={styles["container"]}>
 
                             <div className={styles["photoContainer"]}>
@@ -44,6 +41,7 @@ const PhotoCarousel = ({ onPhotoClick }) => {
                                 </div>
                             </div>
                         </div>
+                        </Link>
                     
        
                
